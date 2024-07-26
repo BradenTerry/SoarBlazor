@@ -1,0 +1,19 @@
+.page {
+    height: 100vh;
+    background-color: var(--bs-body-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    padding: 3rem;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.footer {
+    padding: 1rem;
+    background-color: lightgray;
+}
