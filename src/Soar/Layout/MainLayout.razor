@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+
 <div class="page">
     <main>
         <NavMenu />
@@ -7,6 +8,15 @@
         </article>
     </main>
     <footer class="footer">
-        SOAR &copy; - @DateTime.UtcNow.Year
+        <span>SOAR &copy - @DateTime.UtcNow.Year</span>
+        <div class="float-end">
+            <div class="d-flex flex-column">
+                <span>Follow Us</span>
+                <span class="d-flex flex-row align-items-center justify-content-center">
+                    <a class="fa-brands fa-square-instagram text-decoration-none" style="color: purple;"
+                        href="https://www.instagram.com/sustainableoceanandreefs" target="_blank"></a>
+                </span>
+            </div>
+        </div>
     </footer>
 </div>
