@@ -1,9 +1,9 @@
-﻿<ul class="nav flex-column">
+﻿<ul id="nav-list">
   <li class="nav-item">
-    <NavLink ActiveClass="active" class="nav-link" href="/" @onclick="CloseDrawer">Home</NavLink>
+    <NavLink ActiveClass="active" Match="NavLinkMatch.All" class="nav-link" href="/" @onclick="CloseDrawer">Home</NavLink>
   </li>
   <li class="nav-item">
-    <NavLink ActiveClass="active" class="nav-link" href="/learn-more" @onclick="CloseDrawer">Learn More</NavLink>
+    <NavLink ActiveClass="active" Match="NavLinkMatch.All" class="nav-link" href="/about-us" @onclick="CloseDrawer">About Us</NavLink>
   </li>
 </ul>
 

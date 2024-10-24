@@ -1,5 +1,6 @@
 :root {
     --primary-color-500: rgb(102, 106, 141);
+    --primary-color-300: rgb(224, 224, 224);
     --primary-color-200: rgb(240, 240, 240);
     --primary-color-100: rgb(255, 255, 255);
 }
