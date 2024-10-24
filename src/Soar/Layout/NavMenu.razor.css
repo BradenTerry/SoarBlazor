@@ -1,4 +1,22 @@
-nav {
-    background-color: lightgray;
-    border-bottom: 1px solid black;
+#nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item {
+    width: 100%;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.nav-link {
+    width: 100%;
+}
+
+.nav-item:hover {
+    background-color: var(--primary-color-200);
+}
+
+.nav-item:has(.nav-link.active) {
+    background-color: var(--primary-color-300);
 }

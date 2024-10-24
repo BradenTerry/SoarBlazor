@@ -1,16 +1,22 @@
 ﻿@page "/"
 
-<PageTitle>SOAR - Home</PageTitle>
-
-<div class="container text-center pb-5">
+<div class="page-header container text-center pb-5">
     <img src="/images/soar-logo.png" />
 </div>
-<div class="container p-3" style="border: 1px solid black; border-radius: 10px; box-shadow: 4px 3px 5px 1px;">
-    <h2 class="text-center pb-2">Conserving and Restoring Coral Reefs.</h2>
-    <p class="indent">
-        Our mission at SOAR is to incorporate collaborative approaches to achieve our overarching goal
-        of conserving and restoring coral reefs and ultimately our oceans. We accomplish this by embracing
-        sustainability, holistic perspectives, and partnerships with diverse stakeholders to drive positive
-        change and ensure the long-term health, resilience, and well-being of these vital ecosystems.
-    </p>
+
+<div class="d-flex flex-column m-4">
+    <BoxShadowContainer>
+        <h2 class="text-center pb-2">Conserving and Restoring Coral Reefs.</h2>
+        <p class="indent">
+            Our mission at SOAR is to incorporate collaborative approaches to achieve our overarching goal
+            of conserving and restoring coral reefs and ultimately our oceans. We accomplish this by embracing
+            sustainability, holistic perspectives, and partnerships with diverse stakeholders to drive positive
+            change and ensure the long-term health, resilience, and well-being of these vital ecosystems.
+        </p>
+        <div class="d-flex justify-content-end">
+            <MudButton ButtonType="ButtonType.Button" Color="Color.Primary" Variant="Variant.Filled">
+                <a href="/about-us" style="color: var(--primary-color-100);">Learn more</a>
+            </MudButton>
+        </div>
+    </BoxShadowContainer>
 </div>
