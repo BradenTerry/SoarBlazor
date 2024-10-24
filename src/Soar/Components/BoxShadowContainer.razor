@@ -1,0 +1,29 @@
+<div class="container p-3 primary-color-200" style="border: 1px solid black; border-radius: 10px; @_boxShadowStyle @Style">
+    @ChildContent
+</div>
+
+@code {
+    [EditorRequired, Parameter]
+    public RenderFragment ChildContent { get; set; } = null!;
+
+    [Parameter]
+    public string? Style { get; set; }
+
+    [Parameter]
+    public BoxShadowDirection ShadowDirection { get; set; } = BoxShadowDirection.BottomRight;
+
+    private string? _boxShadowStyle;
+
+    protected override void OnParametersSet()
+    {
+        _boxShadowStyle = ShadowDirection == BoxShadowDirection.BottomLeft
+        ? "box-shadow: -3px 3px 10px 1px;"
+        : "box-shadow: 3px 3px 10px 1px;";
+    }
+
+    public enum BoxShadowDirection
+    {
+        BottomLeft,
+        BottomRight
+    }
+}
