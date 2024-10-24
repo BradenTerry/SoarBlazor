@@ -1,19 +1,4 @@
-::deep .page {
-    height: 100vh;
-    background-color: var(--bs-body-bg);
-    display: flex;
-    flex-direction: column;
-}
-
-::deep article {
-    padding: 3rem;
-}
-
-::deep main {
-    flex-grow: 1;
-}
-
-::deep .footer {
+.footer {
     padding: 1rem;
     background-color: lightgray;
     border-top: 1px solid black;
