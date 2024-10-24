@@ -1,22 +1,54 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <main>
-        <NavMenu />
-        <article class="container">
-            @Body
-        </article>
-    </main>
-    <footer class="footer">
-        <span>SOAR &copy - @DateTime.UtcNow.Year</span>
-        <div class="float-end">
-            <div class="d-flex flex-column">
-                <span>Follow Us</span>
-                <span class="d-flex flex-row align-items-center justify-content-center">
-                    <a class="fa-brands fa-square-instagram text-decoration-none" style="color: purple;"
-                        href="https://www.instagram.com/sustainableoceanandreefs" target="_blank"></a>
-                </span>
-            </div>
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start"
+            OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.h5" Class="ml-3">SOAR</MudText>
+    </MudAppBar>
+    <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="2"
+        Variant="DrawerVariant.Temporary">
+        <NavMenu CloseDrawer="@(() => CloseDrawer())" />
+    </MudDrawer>
+    <MudMainContent>
+        <div class="page">
+            <main>
+                <article class="container">
+                    @Body
+                </article>
+            </main>
+            <footer class="footer">
+                <span>SOAR &copy - @DateTime.UtcNow.Year</span>
+                <div class="float-end">
+                    <div class="d-flex flex-column">
+                        <span>Follow Us</span>
+                        <span class="d-flex flex-row align-items-center justify-content-center">
+                            <a class="fa-brands fa-square-instagram text-decoration-none" style="color: purple;"
+                                href="https://www.instagram.com/sustainableoceanandreefs" target="_blank"></a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </footer>
-</div>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+    bool _drawerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    private void CloseDrawer()
+    {
+        _drawerOpen = false;
+        StateHasChanged();
+    }
+}

@@ -1,7 +1,21 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: var();
+}
+
+html, body, #app {
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 56px);
+    overflow: auto;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 p.indent {
