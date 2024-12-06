@@ -2,3 +2,5 @@
 **/obj/**
 **/wwwroot/lib/**
 .idea/**
+.vs/*
+*.user
